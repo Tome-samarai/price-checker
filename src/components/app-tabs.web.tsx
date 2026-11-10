@@ -15,17 +15,21 @@ import { ExternalLink } from './external-link';
 import { ThemedText } from './themed-text';
 import { ThemedView } from './themed-view';
 
+/**
+ * The app's tab bar on web, with the List and Stores tabs.
+ * @returns The custom tab navigator.
+ */
 export default function AppTabs() {
   return (
     <Tabs>
       <TabSlot style={{ height: '100%' }} />
       <TabList asChild>
         <CustomTabList>
-          <TabTrigger name="home" href="/" asChild>
-            <TabButton>Home</TabButton>
+          <TabTrigger name="index" href="/" asChild>
+            <TabButton>List</TabButton>
           </TabTrigger>
-          <TabTrigger name="explore" href="/explore" asChild>
-            <TabButton>Explore</TabButton>
+          <TabTrigger name="stores" href="/stores" asChild>
+            <TabButton>Stores</TabButton>
           </TabTrigger>
         </CustomTabList>
       </TabList>
